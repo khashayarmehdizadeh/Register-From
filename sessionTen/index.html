@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register frm</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        direction: rtl;
+        text-align: right;
+        background-color: rgb(117, 117, 116);
+      }
+      h2 {
+        text-align: center;
+        margin-top: 20px;
+      }
+      table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: thistle;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      th {
+        background-color: #ffffff;
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="date"],
+      select {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+      }
+      input[type="submit"]:hover {
+        background-color: antiquewhite;
+        text-align: center;
+        font-weight: bold;
+      }
+      .section-title {
+        background-color: wheat;
+        text-align: center;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 align="center">فرم اطلاعات <Form></Form></h1>
+    <form action="./submit-form" method="post">
+        <table>
+            <tr>
+                <td colspan="4" class="section-title">اطلاعات شخصی</td>
+            </tr>
+            <tr>
+                <td>نام</td>
+                <td><input type="text" name="firstname" ></td>
+                <td>نام خانوادگی</td>
+                <td><input type="text" name="lastname" ></td>
+                
+            </tr>
+            <tr>
+                <td>شماره ملی</td>
+                <td><input type="text" name="national_id" ></td>
+                <td> نام پدر</td>
+                <td> <input type="text" name="fathername"></td>
+            </tr>
+            <tr>
+                <td>تاریخ تولد</td>
+                <td><input type="date" name="birthdate"></td>
+                <td>شهر محل تولد</td>
+                <td><input type="text" name="birth_city"></td>
+            </tr>
+            <tr>
+              <td>شماره شناسنامه</td>
+              <td><input type="text" name="id_number"></td>
+              <td>محل صدور</td>
+              <td><input type="text" name="issue_place"></td>
+            </tr>
+            <tr>
+              <td>استان محل تولد</td>
+              <td><select name="issue_place">
+                <option value="">انتخاب کنید</option>
+                <option value="تهران">تهران</option>
+              </select></td>
+              <td>استان محل صدور</td>
+              <td><select name="issue_province" >
+                <option value="">انتخاب کنید</option>
+                <option value="تهران">تهران</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td colspan="4" class="section-title">اطلاعات تماس</td>
+            </tr>
+            <tr>
+              <td>شماره تماس</td>
+              <td> <input type="tel" name="phone"></td>
+              <td> ایمیل</td>
+              <td> <input type="email" name="email" ></td>
+            </tr>
+            <td colspan="4" style="text-align: center;"><input type="submit" name="ارسال" ></td>
+        </table>
+    </form>
+    <script src="./ckeditor/ckeditor.js"></script>
+    <script>
+      CKEDITOR.replace("");
+    </script>
+  </body>
+</html>
